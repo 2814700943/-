@@ -5,15 +5,30 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![UI](https://img.shields.io/badge/UI-CustomTkinter-1F6FEB)
 
-一个面向 Windows 的本机防误动与行为记录工具。  
-提供两种可见、可配置的监控模式：
-
-- 模式一：检测到键盘或鼠标活动后拍照/截图，并立即锁屏
-- 模式二：按设定频率持续截图、尝试摄像头拍照，并记录窗口活动
+一个面向 Windows 的可见式防误动与行为记录工具。  
+当电脑在离开工位后被他人操作时，它可以按设定自动锁屏、截图、拍照，并把记录保存到本地或发送到邮箱。
 
 作者：by-装纯研习社  
 微信：`BAIY_13`  
 官网：[dn.zcyai.cn](https://dn.zcyai.cn)
+
+## 下载
+
+- 最新版本：[GitHub Releases](https://github.com/2814700943/-/releases/latest)
+- 当前发布：`v2.3.1`
+- Windows 可执行文件：`谁动了我的电脑.exe`
+
+## 核心特性
+
+| 模块 | 说明 |
+| --- | --- |
+| 模式一 | 检测到键鼠活动后立即锁屏，并尝试截图 / 拍照 |
+| 模式二 | 按设定频率持续截图、拍照，并记录窗口活动 |
+| 本地保存 | 保存截图、照片、日志到本地目录 |
+| 邮件发送 | 通过 SMTP 把记录发送到指定邮箱 |
+| 最近记录 | 支持详情查看、打开文件、删除附件 |
+| 快捷键 | 支持启动、停止、保存、导出、刷新等操作 |
+| 隐私策略 | 不记录具体按键内容，仅记录事件发生 |
 
 ## 项目截图
 
@@ -29,24 +44,12 @@
 
 ![帮助文档](docs/screenshots/help.png)
 
-## 功能概览
-
-- 双模式监控：临时防碰电脑 / 持续记录使用行为
-- 键鼠检测：检测键盘与鼠标活动
-- 自动锁屏：调用 `LockWorkStation`
-- 摄像头拍照：基于 OpenCV 尝试抓拍
-- 屏幕截图：基于 Pillow `ImageGrab`
-- 邮件发送：支持 SMTP 发送附件
-- 本地保存：支持截图、照片、日志保存到本地目录
-- 日志查看：最近记录、详情查看、打开文件、删除附件
-- 快捷键：支持启动、停止、保存、导出、刷新等快捷操作
-- 隐私保护：不记录具体按键内容，仅记录事件发生
-
 ## 适用场景
 
-- 人离开电脑后，想在被碰动时立即锁屏并保留证据
-- 想记录一段时间内的电脑使用情况
-- 想把截图、照片、日志发到邮箱或留在本地
+- 办公室临时离开工位，希望有人碰电脑时立刻锁屏并留证
+- 宿舍、工作室、共享环境中，希望记录电脑被碰动的情况
+- 想把证据保留在本地，或自动发到邮箱
+- 想使用一个可见、可停止、可配置的 Windows 记录工具
 
 ## 运行环境
 
@@ -54,7 +57,7 @@
 - Python 3.11+
 - 摄像头可选
 
-Python 依赖：
+核心依赖：
 
 - `Pillow`
 - `opencv-python`
@@ -62,7 +65,7 @@ Python 依赖：
 
 ## 快速开始
 
-在仓库根目录直接运行：
+在仓库根目录运行：
 
 ```powershell
 .\run.ps1
@@ -89,13 +92,13 @@ outputs/who_touched_my_pc/dist/
 
 ## 配置说明
 
-项目支持在界面中直接填写，或通过示例配置文件初始化：
+项目支持在界面中直接配置，也可以从示例配置初始化：
 
 ```text
 outputs/who_touched_my_pc/config.example.json
 ```
 
-可配置项包括：
+主要可配置项：
 
 - 保存目录
 - 图片格式
@@ -112,6 +115,9 @@ outputs/who_touched_my_pc/config.example.json
 ```text
 .
 ├─ README.md
+├─ CHANGELOG.md
+├─ CONTRIBUTING.md
+├─ SECURITY.md
 ├─ LICENSE
 ├─ run.ps1
 ├─ build_exe.ps1
@@ -129,7 +135,7 @@ outputs/who_touched_my_pc/config.example.json
 
 ## Git 忽略策略
 
-以下内容默认不进入仓库：
+以下内容默认不会进入仓库：
 
 - 真实配置：`config.json`
 - 运行日志：`logs/`
@@ -152,6 +158,12 @@ outputs/who_touched_my_pc/config.example.json
 - 键盘内容窃取
 
 界面和功能均以可见、可配置、可停止为前提。
+
+## 相关文档
+
+- 变更记录：[CHANGELOG.md](CHANGELOG.md)
+- 贡献说明：[CONTRIBUTING.md](CONTRIBUTING.md)
+- 安全说明：[SECURITY.md](SECURITY.md)
 
 ## 开源协议
 
