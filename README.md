@@ -1,5 +1,10 @@
 # 谁动了我的电脑
 
+![Platform](https://img.shields.io/badge/platform-Windows-0A66C2)
+![Python](https://img.shields.io/badge/python-3.11+-3776AB)
+![License](https://img.shields.io/badge/license-MIT-green)
+![UI](https://img.shields.io/badge/UI-CustomTkinter-1F6FEB)
+
 一个面向 Windows 的本机防误动与行为记录工具。  
 提供两种可见、可配置的监控模式：
 
