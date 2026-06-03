@@ -8,7 +8,7 @@
 
 作者：by-装纯研习社  
 微信：`BAIY_13`  
-官网：[www.zcyai.cn](https://www.zcyai.cn)
+官网：[dn.zcyai.cn](https://dn.zcyai.cn)
 
 ## 项目截图
 
