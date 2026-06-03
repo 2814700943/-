@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local runtime data and secrets
+config.json
+outputs/config.json
+outputs/logs/
+outputs/captures/
+outputs/who_touched_my_pc/config.json
+outputs/who_touched_my_pc/logs/
+outputs/who_touched_my_pc/captures/
+
+# Build artifacts
+work/
+build/
+dist/
+*.spec
+*.toc
+*.pkg
+*.pyz
+*.zip
+*.exe
+outputs/who_touched_my_pc/build/
+outputs/who_touched_my_pc/dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
